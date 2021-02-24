@@ -26,6 +26,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.example.android.dessertclicker.databinding.ActivityMainBinding
+import timber.log.Timber
 
 const val TAG = "MainActivity"
 const val KEY_REVENUE = "revenue_key"
@@ -88,42 +89,42 @@ class MainActivity : AppCompatActivity() {
         // Make sure the correct dessert is showing
         binding.dessertButton.setImageResource(currentDessert.imageId)
 
-        Log.d("MainActivity", "onCreate Called")
+        Timber.i("onCreate Called")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "onStart Called")
+        Timber.i("onStart Called")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume Called")
+        Timber.i("onResume Called")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d(TAG, "onPause Called")
+        Timber.i("onPause Called")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(TAG, "onStop Called")
+        Timber.i("onStop Called")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "onDestroy Called")
+        Timber.i("onDestroy Called")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d(TAG, "onRestart Called")
+        Timber.i("onRestart Called")
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        Log.d(TAG, "onSaveInstanceState Called")
+        Log.d("MainActivity", "onSaveInstanceState Called")
         outState.putInt(KEY_REVENUE, revenue)
         outState.putInt(KEY_DESSERT_SOLD, dessertsSold)
     }
